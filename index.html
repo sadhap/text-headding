@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE-TWO: RESIZE FONT</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+  <!-- create container  -->
+    <div class="container">
+      <!-- add textarea for input text -->
+      <label for="input-txt">Type something:</label>
+      <textarea  rows="5" cols="30"class="input-text" id="myTextarea">
+      </textarea>
+       <div class="output">
+          <button type="button" onclick="output()"class="btn">Output</button>
+          <button id="h1">h1</button>
+        <button  id="h2">h2</button>
+        <button id="h3">h3</button>
+        <h1 id="demo"></h1>
+        </div>
+    </div>
+    <!-- add script to  create function -->
+    <script>
+       let inp = document.getElementById("demo");
+        let headingOne= document.getElementById("h1");
+        let headingTwo = document.getElementById("h2");
+        let  headingThree = document.getElementById("h3");
+        headingOne.addEventListener("click",high);
+        function high() {
+          inp.style.fontSize = "40px";
+        }
+        headingTwo.addEventListener("click",medium);
+        function medium() {
+        inp.style.fontSize = "30px";
+        }
+        headingThree.addEventListener("click",small)
+        function  small()
+        {
+         inp.style.fontSize = "25px"
+        }
+        // output function create
+        function output() {
+        var x = document.getElementById("myTextarea").value;
+        document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
